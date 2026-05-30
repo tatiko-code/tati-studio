@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title id="pageTitle">Tati Studio — Collection</title>
+  <meta name="description" content="Tati Studio bridal couture — view the full gallery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header solid">
+    <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="brand"><img src="images/logo.png" alt="Tati Studio" class="brand-logo" /></a>
+    <a href="contact.html" class="cta-mini">Book an appointment</a>
+  </header>
+
+  <div class="nav-overlay" aria-hidden="true">
+    <button class="close" aria-label="Close menu">&times;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="real-brides.html">Real Brides</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+      </div>
+
+  <!-- DRESS TITLE -->
+  <section class="dress-title-section">
+    <a href="collection.html" class="back-link">← Collection</a>
+    <h1 id="dressHeroName"></h1>
+  </section>
+
+  <!-- SLIDER -->
+  <section class="dress-slider-section">
+    <div class="dress-slider">
+      <button class="ds-arrow ds-prev" id="dsPrev" aria-label="Previous">&#8592;</button>
+      <div class="ds-track" id="dressGallery"></div>
+      <button class="ds-arrow ds-next" id="dsNext" aria-label="Next">&#8594;</button>
+    </div>
+    <div class="ds-counter" id="dsCounter"></div>
+  </section>
+
+  <!-- CTA -->
+  <section class="appointment reveal">
+    <span class="eyebrow" style="font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:18px;">Begin Your Journey</span>
+    <h2>This gown could be yours.</h2>
+    <p>Book a private fitting and experience the gown in person.</p>
+    <a href="contact.html" class="btn">Schedule a Fitting</a>
+  </section>
+
+  <!-- ALSO LOVE -->
+  <section class="also-love reveal">
+    <div class="section-title">
+      <span class="eyebrow">You may also love</span>
+      <h2 style="font-size:clamp(28px,3vw,40px);">From the same collection</h2>
+    </div>
+    <div class="coll-grid coll-grid--3" id="alsoLove"></div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Tati Studio" class="footer-logo" />
+      </div>
+      <div class="footer-col"><h4>Atelier</h4><ul><li><a href="collection.html">Collection</a></li><li><a href="real-brides.html">Real Brides</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h4>Visit</h4><ul><li>Herzliya, Israel</li><li>Coming soon to Miami</li><li>By appointment</li><li><a href="contact.html">Book a visit</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@tatistudio.com">hello@tatistudio.com</a></li><li><a href="tel:+972525013058">+972 52-501-3058</a></li><li><a href="https://wa.me/972525013058">WhatsApp</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span data-year></span> Tati Studio. All rights reserved.</div>
+      <div class="socials"><a href="https://www.instagram.com/the_official_tati_bridal/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@tatibridal" target="_blank" rel="noopener">TikTok</a><a href="#">Pinterest</a></div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Close">&#215;</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous">&#8592;</button>
+    <button class="lb-next" id="lbNext" aria-label="Next">&#8594;</button>
+    <img class="lb-img" id="lbImg" src="" alt="" />
+    <span class="lb-counter" id="lbCounter"></span>
+  </div>
+
+  <script src="js/dresses.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dress.js"></script>
+</body>
+</html>

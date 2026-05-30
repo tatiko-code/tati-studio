@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Collection — Tati Studio | Bridal &amp; Evening Couture</title>
+  <meta name="description" content="Tati Studio bridal and evening couture collection — bespoke gowns made to order." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header solid">
+    <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="brand"><img src="images/logo.png" alt="Tati Studio" class="brand-logo" /></a>
+    <a href="contact.html" class="cta-mini">Book an appointment</a>
+  </header>
+
+  <div class="nav-overlay" aria-hidden="true">
+    <button class="close" aria-label="Close menu">&times;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="real-brides.html">Real Brides</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+      </div>
+
+  <!-- PAGE HERO -->
+  <section class="coll-hero">
+    <img src="images/collection/3/coll-hero.jpg" alt="Tati Studio Collection" />
+    <div class="coll-hero-caption">
+      <span class="eyebrow">Atelier 2026</span>
+      <h1>Collection</h1>
+    </div>
+  </section>
+
+  <!-- COLLECTION GRID — populated by JS -->
+  <section class="coll-grid-section">
+    <div class="coll-grid" id="collGrid"></div>
+  </section>
+
+  <!-- CTA -->
+  <section class="appointment reveal">
+    <span class="eyebrow" style="font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:18px;">Begin Your Journey</span>
+    <h2>Find your gown.</h2>
+    <p>Each piece is made to order, tailored to your silhouette. Book a private appointment at our Miami atelier.</p>
+    <a href="contact.html" class="btn">Book an Appointment</a>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Tati Studio" class="footer-logo" />
+      </div>
+      <div class="footer-col"><h4>Atelier</h4><ul><li><a href="collection.html">Collection</a></li><li><a href="real-brides.html">Real Brides</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h4>Visit</h4><ul><li>Herzliya, Israel</li><li>Coming soon to Miami</li><li>By appointment</li><li><a href="contact.html">Book a visit</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@tatistudio.com">hello@tatistudio.com</a></li><li><a href="tel:+972525013058">+972 52-501-3058</a></li><li><a href="https://wa.me/972525013058">WhatsApp</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span data-year></span> Tati Studio. All rights reserved.</div>
+      <div class="socials"><a href="https://www.instagram.com/the_official_tati_bridal/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@tatibridal" target="_blank" rel="noopener">TikTok</a><a href="#">Pinterest</a></div>
+    </div>
+  </footer>
+
+  <script src="js/dresses.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      const grid = document.getElementById('collGrid');
+      DRESSES.forEach(function (d) {
+        const card = document.createElement('a');
+        card.className = 'coll-card';
+        card.href = 'dress.html?dress=' + d.slug;
+        card.innerHTML =
+          '<div class="coll-img-wrap">' +
+            '<img src="images/collection/' + d.slug + '/' + d.photos[0] + '" alt="' + d.name + '" loading="lazy" />' +
+          '</div>' +
+          '<div class="coll-meta">' +
+            '<span class="coll-name">' + d.name + '</span>' +
+          '</div>';
+        grid.appendChild(card);
+      });
+    })();
+  </script>
+</body>
+</html>

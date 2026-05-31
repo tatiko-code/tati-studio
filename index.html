@@ -20,7 +20,7 @@
       <span></span><span></span><span></span>
     </button>
     <a href="index.html" class="brand"><img src="images/logo.png" alt="Tati Studio" class="brand-logo" /></a>
-    <a href="contact.html" class="cta-mini">Book an appointment</a>
+    <a href="contact.html" class="cta-mini" data-i18n="header.book">Book an appointment</a>
   </header>
 
   <!-- NAV OVERLAY -->
@@ -28,19 +28,24 @@
     <button class="close" aria-label="Close menu">&times;</button>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="collection.html">Collection</a></li>
-        <li><a href="real-brides.html">Real Brides</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="collection.html" data-i18n="nav.collection">Collection</a></li>
+        <li><a href="real-brides.html" data-i18n="nav.realBrides">Real Brides</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
-    </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
       </div>
+    </nav>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
     <video id="heroVideo" autoplay muted loop playsinline></video>
-    <a href="contact.html" class="hero-cta-minimal">Book a Private Appointment</a>
+    <a href="contact.html" class="hero-cta-minimal" data-i18n="home.hero.cta">Book a Private Appointment</a>
   </section>
 
   <script>
@@ -63,8 +68,8 @@
   <!-- INTRO / WORLD -->
   <section class="reveal">
     <div class="intro" style="text-align:center; max-width:600px; margin:0 auto;">
-      <h2 style="font-family:var(--serif); font-size:clamp(28px,3.5vw,46px); font-weight:300; font-style:italic; margin-bottom:24px;">Every gown begins with a conversation.</h2>
-      <p>Bespoke bridal and evening gowns, made to order. Hand-finished around your silhouette — designed for the woman you're becoming.</p>
+      <h2 style="font-family:var(--serif); font-size:clamp(28px,3.5vw,46px); font-weight:300; font-style:italic; margin-bottom:24px;" data-i18n="home.intro.h2">Every gown begins with a conversation.</h2>
+      <p data-i18n="home.intro.p">Bespoke bridal and evening gowns, made to order. Hand-finished around your silhouette — designed for the woman you're becoming.</p>
     </div>
   </section>
 
@@ -75,24 +80,24 @@
         <img src="images/logo.png" alt="Tati Studio" class="footer-logo" />
       </div>
       <div class="footer-col">
-        <h4>Atelier</h4>
+        <h4 data-i18n="footer.atelier">Atelier</h4>
         <ul>
-          <li><a href="collection.html">Collection</a></li>
-          <li><a href="real-brides.html">Real Brides</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="collection.html" data-i18n="nav.collection">Collection</a></li>
+          <li><a href="real-brides.html" data-i18n="nav.realBrides">Real Brides</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Visit</h4>
+        <h4 data-i18n="footer.visit">Visit</h4>
         <ul>
-          <li>Herzliya, Israel</li>
-          <li>Coming soon toBridal & Evening Couture</li>
-          <li>By appointment</li>
-          <li><a href="contact.html">Book a visit</a></li>
+          <li data-i18n="footer.location">Herzliya, Israel</li>
+          <li data-i18n="footer.miami">Coming soon to Miami</li>
+          <li data-i18n="footer.byAppt">By appointment</li>
+          <li><a href="contact.html" data-i18n="footer.bookVisit">Book a visit</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4 data-i18n="footer.contactCol">Contact</h4>
         <ul>
           <li><a href="mailto:hello@tatistudio.com">hello@tatistudio.com</a></li>
           <li><a href="tel:+972525013058">+972 52-501-3058</a></li>
@@ -101,7 +106,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; <span data-year></span> Tati Studio. All rights reserved.</div>
+      <div>&copy; <span data-year></span> Tati Studio. <span data-i18n="footer.rights">All rights reserved.</span></div>
       <div class="socials">
         <a href="https://www.instagram.com/the_official_tati_bridal/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.tiktok.com/@tatibridal" target="_blank" rel="noopener">TikTok</a>
@@ -110,6 +115,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

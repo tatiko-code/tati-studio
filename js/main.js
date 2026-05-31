@@ -54,7 +54,8 @@ if (form) {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     if (btn) {
-      btn.textContent = 'Thank you — we will be in touch';
+      var lang = typeof getLang === 'function' ? getLang() : 'en';
+      btn.textContent = (TRANSLATIONS[lang] && TRANSLATIONS[lang]['contact.thankYou']) || 'Thank you — we will be in touch';
       btn.disabled = true;
     }
   });

@@ -15,25 +15,30 @@
   <header class="site-header solid">
     <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
     <a href="index.html" class="brand"><img src="images/logo.png" alt="Tati Studio" class="brand-logo" /></a>
-    <a href="contact.html" class="cta-mini">Book an appointment</a>
+    <a href="contact.html" class="cta-mini" data-i18n="header.book">Book an appointment</a>
   </header>
 
   <div class="nav-overlay" aria-hidden="true">
     <button class="close" aria-label="Close menu">&times;</button>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="collection.html">Collection</a></li>
-        <li><a href="real-brides.html">Real Brides</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="collection.html" data-i18n="nav.collection">Collection</a></li>
+        <li><a href="real-brides.html" data-i18n="nav.realBrides">Real Brides</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
-    </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
       </div>
+    </nav>
+  </div>
 
   <!-- DRESS TITLE -->
   <section class="dress-title-section">
-    <a href="collection.html" class="back-link">← Collection</a>
+    <a href="collection.html" class="back-link" data-i18n="dress.back">← Collection</a>
     <h1 id="dressHeroName"></h1>
   </section>
 
@@ -49,17 +54,17 @@
 
   <!-- CTA -->
   <section class="appointment reveal">
-    <span class="eyebrow" style="font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:18px;">Begin Your Journey</span>
-    <h2>This gown could be yours.</h2>
-    <p>Book a private fitting and experience the gown in person.</p>
-    <a href="contact.html" class="btn">Schedule a Fitting</a>
+    <span class="eyebrow" style="font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:18px;" data-i18n="dress.cta.eyebrow">Begin Your Journey</span>
+    <h2 data-i18n="dress.cta.h2">This gown could be yours.</h2>
+    <p data-i18n="dress.cta.p">Book a private fitting and experience the gown in person.</p>
+    <a href="contact.html" class="btn" data-i18n="dress.cta.btn">Schedule a Fitting</a>
   </section>
 
   <!-- ALSO LOVE -->
   <section class="also-love reveal">
     <div class="section-title">
-      <span class="eyebrow">You may also love</span>
-      <h2 style="font-size:clamp(28px,3vw,40px);">From the same collection</h2>
+      <span class="eyebrow" data-i18n="dress.alsoLove.eyebrow">You may also love</span>
+      <h2 style="font-size:clamp(28px,3vw,40px);" data-i18n="dress.alsoLove.h2">From the same collection</h2>
     </div>
     <div class="coll-grid coll-grid--3" id="alsoLove"></div>
   </section>
@@ -69,12 +74,12 @@
       <div class="footer-brand">
         <img src="images/logo.png" alt="Tati Studio" class="footer-logo" />
       </div>
-      <div class="footer-col"><h4>Atelier</h4><ul><li><a href="collection.html">Collection</a></li><li><a href="real-brides.html">Real Brides</a></li><li><a href="about.html">About</a></li></ul></div>
-      <div class="footer-col"><h4>Visit</h4><ul><li>Herzliya, Israel</li><li>Coming soon to Miami</li><li>By appointment</li><li><a href="contact.html">Book a visit</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@tatistudio.com">hello@tatistudio.com</a></li><li><a href="tel:+972525013058">+972 52-501-3058</a></li><li><a href="https://wa.me/972525013058">WhatsApp</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.atelier">Atelier</h4><ul><li><a href="collection.html" data-i18n="nav.collection">Collection</a></li><li><a href="real-brides.html" data-i18n="nav.realBrides">Real Brides</a></li><li><a href="about.html" data-i18n="nav.about">About</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.visit">Visit</h4><ul><li data-i18n="footer.location">Herzliya, Israel</li><li data-i18n="footer.miami">Coming soon to Miami</li><li data-i18n="footer.byAppt">By appointment</li><li><a href="contact.html" data-i18n="footer.bookVisit">Book a visit</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.contactCol">Contact</h4><ul><li><a href="mailto:hello@tatistudio.com">hello@tatistudio.com</a></li><li><a href="tel:+972525013058">+972 52-501-3058</a></li><li><a href="https://wa.me/972525013058">WhatsApp</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; <span data-year></span> Tati Studio. All rights reserved.</div>
+      <div>&copy; <span data-year></span> Tati Studio. <span data-i18n="footer.rights">All rights reserved.</span></div>
       <div class="socials"><a href="https://www.instagram.com/the_official_tati_bridal/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@tatibridal" target="_blank" rel="noopener">TikTok</a><a href="#">Pinterest</a></div>
     </div>
   </footer>
@@ -89,6 +94,7 @@
   </div>
 
   <script src="js/dresses.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script src="js/dress.js"></script>
 </body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Connecting to TikTok — Tati Studio</title>
+  <style>
+    body { font-family: 'Georgia', serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #fff; }
+    .msg { text-align: center; color: #333; }
+    h1 { font-weight: 300; font-size: 1.5rem; margin-bottom: 0.5em; }
+    p { font-size: 0.9rem; color: #888; }
+  </style>
+</head>
+<body>
+  <div class="msg">
+    <h1>TikTok Authorization Complete</h1>
+    <p>You can close this window and return to the app.</p>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    if (code && window.opener) {
+      window.opener.postMessage({ tiktok_code: code }, '*');
+      window.close();
+    }
+  </script>
+</body>
+</html>

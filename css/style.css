@@ -654,6 +654,9 @@ footer {
   color: var(--ink-mute);
 }
 .footer-bottom .socials a { margin-left: 18px; }
+.footer-legal { display: flex; gap: 20px; }
+.footer-legal a { color: var(--ink-mute); text-decoration: none; letter-spacing: 0.1em; font-size: 10px; }
+.footer-legal a:hover { color: var(--ink); }
 
 /* ===========================
    PAGE HERO (interior pages)
